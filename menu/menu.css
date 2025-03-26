@@ -1,0 +1,65 @@
+.Menu ul {
+    display: flex; /* Coloca los elementos de la lista en una fila  */
+    padding: 0; /* Elimina el relleno de la lista */
+    margin: 0; /* Elimina el margen de la lista */
+    list-style: none; /* Elimina los puntos o números de la lista */
+}
+
+/* Estilo para los enlaces dentro del menú */
+.Menu a {
+    display: block; /* Hace que el enlace ocupe todo el espacio disponible */
+    padding: 1em 2em; /* Añade espacio interno alrededor del texto del enlace */
+    background-color: #00ccff; /* Color de fondo del enlace */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    color: #191C26; /* Color del texto */
+    transition: background-color 0.3s; /* Añade una transición suave al cambiar el color de fondo */
+}
+
+/* Estilo cuando el mouse pasa sobre el enlace */
+.Menu a:hover {
+    background-color: #00ccff; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Estilo para los elementos de la lista principal */
+.Menu ul li {
+    position: relative; /* Establece un contexto de posición para los submenús */
+    width: 100%;
+}
+
+/* Estilo para los submenús */
+.Menu ul li ul {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute; /* Posiciona el submenú de forma absoluta respecto al elemento padre */
+    top: 100%; /* Coloca el submenú justo debajo del elemento padre */
+    left: 0%; /* Alinea el submenú con el borde izquierdo del elemento padre */
+    padding: 0; /* Elimina el relleno del submenú */
+    margin: 0; /* Elimina el margen del submenú */
+    list-style: none; /* Elimina los puntos o números de la lista */
+    background-color: #00ccff; /* Color de fondo del submenú */
+    width: 100%; /* Hace que el submenú tenga el mismo ancho que el elemento padre */
+}
+
+/* Muestra el submenú cuando el mouse pasa */
+.Menu ul li:hover ul {
+    display: block; /* Hace visible el submenú */
+}
+
+/* Estilo para los enlaces dentro del submenú */
+@media (max-widh: 768px)
+{
+.Menu ul li ul li a {
+    padding: 1em; /* Añade espacio interno alrededor del enlace del submenu */
+}
+
+/*Estilo para pantallas pequeñas */
+.Menu ul{
+    flex-direction: column;; /*cambia la direccion del menu de la columna */
+}
+.Menu ul li {
+    width: 100%; /*Asegura que cada elemento ocuper el 100% del ancho */
+}
+.Menu a {
+    padding: 1em; /*Mantiene el tamaño adecuado */
+    text-align: center; /* Centra el texto de los elementos del menu */
+}
+}
